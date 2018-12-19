@@ -22,18 +22,19 @@ def clear_world(word):
             id_char.append(i)
     return input_char, id_char
 
-
-if __name__ == "__main__":
-    word = """Если в слове есть символ не английского алфавита,
-        то необходимо вызвать исключение ValueError
-        и в сообщении передать сам неверный символ и его позицию.
-
-    :param word: строка
-    :param filter: строка из символов, которые надо убрать из строки, переданной в параметре word
-    :return: result - строка из параметра word, очищенная от символов, содержащихся в параметре filterstr"""
-
 try:
-    clear_word(word, filterstr)
+
+    if __name__ == "__main__":
+        word = """Если в слове есть символ не английского алфавита,
+            то необходимо вызвать исключение ValueError
+            и в сообщении передать сам неверный символ и его позицию.
+
+        :param word: строка
+        :param filter: строка из символов, которые надо убрать из строки, переданной в параметре word
+        :return: result - строка из параметра word, очищенная от символов, содержащихся в параметре filterstr"""
+
+
+        clear_word(word, filterstr)
 except ValueError:
     print("Its not English")
     input_char, id_char = clear_world(word)
